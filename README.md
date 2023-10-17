@@ -6,6 +6,9 @@
     - pushare i 5 numeri in numbersDOMElement
 
 - con un tasto parte un timer di 30 secondi e i numeri scompaiono
+    - recuperare goBtnDOMElement dal DOM
+    - al click far partire il timer di 30 secondi e nascondere i 5 numeri
+    
 
 - scaduto il tempo, l'utente deve dichiarare nel prompt i 5 numeri che ricorda (nessun numero può ripetersi)
 

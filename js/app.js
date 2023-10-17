@@ -1,7 +1,11 @@
 const numbersDOMElement = document.querySelector('.numbers')
-console.log(numbersDOMElement)
+const goBtnDOMElement = document.getElementById('go-btn')
+console.log(numbersDOMElement, goBtnDOMElement)
+
+
 
 const numbersArray = []
+const timeOutMessage = 'Il tempo è scaduto!'
 
 while (numbersArray.length < 5) {
     // generare un numero random compreso tra 1 e 100
@@ -17,6 +21,21 @@ while (numbersArray.length < 5) {
 }
 
 console.log(numbersArray)
+// pushare i 5 numeri in numbersDOMElement 
+numbersDOMElement.innerHTML = numbersArray
+
+// click sul bottone
+goBtnDOMElement.addEventListener ('click', function(){
+    startTimer(3000)
+})
+
+
+// funzione per avviare il timer
+function startTimer(duration) {
+    setTimeout(function() {
+      alert(timeOutMessage)
+    }, duration)
+}
 
 // funzione per generare un numero random compreso tra 2 numeri
 function getRandomIntInclusive(min, max) {
